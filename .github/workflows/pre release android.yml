@@ -1,0 +1,63 @@
+name: Build
+on:
+  push:
+    branches: [ master ]
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout sources
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+        filter: blob:none
+
+    - name: Setup Java
+      uses: actions/setup-java@v5
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v5
+
+    - name: Get version name
+      id: version
+      run: |
+        VERSION_NAME=$(grep -oP 'versionName\s*["'\'']\K[^"'\'']+' app/build.gradle 2>/dev/null || echo "1.0.0")
+        echo "version_name=${VERSION_NAME}" >> $GITHUB_OUTPUT
+        echo "version_name_short=$(echo $VERSION_NAME | sed 's/\./_/g')" >> $GITHUB_OUTPUT
+
+    - name: Build with Gradle
+      run: ./gradlew assembleRelease
+
+    - name: Rename APK
+      id: apk
+      run: |
+        APK=$(ls app/build/outputs/apk/release/*.apk | head -n 1)
+        NEW_NAME="Xtra_for_AndroidTV_${{ steps.version.outputs.version_name }}.apk"
+        cp "$APK" "app/build/outputs/apk/release/$NEW_NAME"
+        echo "apk_path=app/build/outputs/apk/release/$NEW_NAME" >> $GITHUB_OUTPUT
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v7
+      with:
+        name: apk-${{ steps.version.outputs.version_name }}
+        path: ${{ steps.apk.outputs.apk_path }}
+
+    - name: Generate release notes
+      run: git log --oneline -n 20 > notes.txt
+
+    - name: Create prerelease
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        gh release create "v${{ steps.version.outputs.version_name }}" \
+          --title "Xtra for AndroidTV v${{ steps.version.outputs.version_name }}" \
+          --notes-file notes.txt \
+          --prerelease \
+          --latest=false \
+          "${{ steps.apk.outputs.apk_path }}"
