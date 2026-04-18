@@ -157,33 +157,33 @@
         <item name="maxButtonHeight">42dp</item>
     </style>
 
-    <style name="CompactBottomNavigation" parent="Widget.Material3.NavigationView ">
+    <!--<style name="CompactBottomNavigation" parent="Widget.Material3.NavigationView ">
         <item name="itemPaddingTop">6dp</item>
         <item name="itemPaddingBottom">6dp</item>
         <item name="activeIndicatorLabelPadding">2dp</item>
         <item name="itemActiveIndicatorStyle">@style/CompactActiveIndicator</item>
-    </style>
+    </style>-->
 
-    <style name="CompactBottomNavigationAmoled" parent="Widget.Material3.NavigationView ">
+    <!--<style name="CompactBottomNavigationAmoled" parent="Widget.Material3.NavigationView ">
         <item name="itemPaddingTop">6dp</item>
         <item name="itemPaddingBottom">6dp</item>
         <item name="activeIndicatorLabelPadding">2dp</item>
         <item name="itemActiveIndicatorStyle">@style/CompactActiveIndicator</item>
         <item name="materialThemeOverlay">@style/BottomNavigationOverlayAmoled</item>
         <item name="elevation">0dp</item>
-    </style>
+    </style>-->
 
-    <style name="CompactBottomNavigationBlue" parent="Widget.Material3.NavigationView ">
+    <!--<style name="CompactBottomNavigationBlue" parent="Widget.Material3.NavigationView ">
         <item name="itemPaddingTop">6dp</item>
         <item name="itemPaddingBottom">6dp</item>
         <item name="activeIndicatorLabelPadding">2dp</item>
         <item name="itemActiveIndicatorStyle">@style/CompactActiveIndicator</item>
         <item name="materialThemeOverlay">@style/BottomNavigationOverlayBlue</item>
     </style>
-
-    <style name="CompactActiveIndicator" parent="Widget.Material3.NavigationView .ActiveIndicator">
+-->
+    <!--<style name="CompactActiveIndicator" parent="Widget.Material3.NavigationView .ActiveIndicator">
         <item name="android:height">28dp</item>
-    </style>
+    </style>-->
 
     <style name="CompactCard" parent="Widget.Material3.CardView.Elevated">
         <item name="android:layout_margin">4dp</item>
@@ -1168,19 +1168,19 @@
         <item name="indicatorColor">@android:color/white</item>
     </style>
 
-    <style name="BottomNavigationAmoled" parent="Widget.Material3.NavigationView ">
+    <!--<style name="BottomNavigationAmoled" parent="Widget.Material3.NavigationView ">
         <item name="materialThemeOverlay">@style/BottomNavigationOverlayAmoled</item>
         <item name="elevation">0dp</item>
-    </style>
+    </style>-->
 
     <style name="BottomNavigationOverlayAmoled">
         <item name="colorSurfaceContainer">@android:color/black</item>
         <item name="colorSecondaryContainer">@color/surfaceContainerAmoled</item>
     </style>
 
-    <style name="BottomNavigationBlue" parent="Widget.Material3.NavigationView ">
+    <!--<style name="BottomNavigationBlue" parent="Widget.Material3.NavigationView ">
         <item name="materialThemeOverlay">@style/BottomNavigationOverlayBlue</item>
-    </style>
+    </style>-->
 
     <style name="BottomNavigationOverlayBlue">
         <item name="colorSecondaryContainer">@color/secondaryContainerBlue</item>
