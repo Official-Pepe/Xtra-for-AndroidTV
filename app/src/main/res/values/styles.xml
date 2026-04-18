@@ -157,14 +157,14 @@
         <item name="maxButtonHeight">42dp</item>
     </style>
 
-    <style name="CompactBottomNavigation" parent="Widget.Material3.BottomNavigationView">
+    <style name="CompactBottomNavigation" parent="Widget.Material3.NavigationView ">
         <item name="itemPaddingTop">6dp</item>
         <item name="itemPaddingBottom">6dp</item>
         <item name="activeIndicatorLabelPadding">2dp</item>
         <item name="itemActiveIndicatorStyle">@style/CompactActiveIndicator</item>
     </style>
 
-    <style name="CompactBottomNavigationAmoled" parent="Widget.Material3.BottomNavigationView">
+    <style name="CompactBottomNavigationAmoled" parent="Widget.Material3.NavigationView ">
         <item name="itemPaddingTop">6dp</item>
         <item name="itemPaddingBottom">6dp</item>
         <item name="activeIndicatorLabelPadding">2dp</item>
@@ -173,7 +173,7 @@
         <item name="elevation">0dp</item>
     </style>
 
-    <style name="CompactBottomNavigationBlue" parent="Widget.Material3.BottomNavigationView">
+    <style name="CompactBottomNavigationBlue" parent="Widget.Material3.NavigationView ">
         <item name="itemPaddingTop">6dp</item>
         <item name="itemPaddingBottom">6dp</item>
         <item name="activeIndicatorLabelPadding">2dp</item>
@@ -181,7 +181,7 @@
         <item name="materialThemeOverlay">@style/BottomNavigationOverlayBlue</item>
     </style>
 
-    <style name="CompactActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+    <style name="CompactActiveIndicator" parent="Widget.Material3.NavigationView .ActiveIndicator">
         <item name="android:height">28dp</item>
     </style>
 
@@ -1168,7 +1168,7 @@
         <item name="indicatorColor">@android:color/white</item>
     </style>
 
-    <style name="BottomNavigationAmoled" parent="Widget.Material3.BottomNavigationView">
+    <style name="BottomNavigationAmoled" parent="Widget.Material3.NavigationView ">
         <item name="materialThemeOverlay">@style/BottomNavigationOverlayAmoled</item>
         <item name="elevation">0dp</item>
     </style>
@@ -1178,7 +1178,7 @@
         <item name="colorSecondaryContainer">@color/surfaceContainerAmoled</item>
     </style>
 
-    <style name="BottomNavigationBlue" parent="Widget.Material3.BottomNavigationView">
+    <style name="BottomNavigationBlue" parent="Widget.Material3.NavigationView ">
         <item name="materialThemeOverlay">@style/BottomNavigationOverlayBlue</item>
     </style>
 
@@ -1553,7 +1553,7 @@
         <item name="dividerColor">@color/secondaryTextColorBlue</item>
     </style>
 
-    <style name="MaterialBottomNavigationDark" parent="Widget.MaterialComponents.BottomNavigationView">
+    <style name="MaterialBottomNavigationDark" parent="Widget.MaterialComponents.NavigationView ">
         <item name="materialThemeOverlay">@style/MaterialBottomNavigationOverlay</item>
         <item name="itemTextAppearanceActive">@style/MaterialBottomNavigationText</item>
         <item name="itemTextAppearanceInactive">@style/MaterialBottomNavigationText</item>
@@ -1562,7 +1562,7 @@
         <item name="itemTextColor">@color/nav_bar_dark</item>
     </style>
 
-    <style name="MaterialBottomNavigationLight" parent="Widget.MaterialComponents.BottomNavigationView">
+    <style name="MaterialBottomNavigationLight" parent="Widget.MaterialComponents.NavigationView ">
         <item name="materialThemeOverlay">@style/MaterialBottomNavigationOverlay</item>
         <item name="itemTextAppearanceActive">@style/MaterialBottomNavigationText</item>
         <item name="itemTextAppearanceInactive">@style/MaterialBottomNavigationText</item>
@@ -1571,7 +1571,7 @@
         <item name="itemTextColor">@color/nav_bar_light</item>
     </style>
 
-    <style name="MaterialBottomNavigationBlue" parent="Widget.MaterialComponents.BottomNavigationView">
+    <style name="MaterialBottomNavigationBlue" parent="Widget.MaterialComponents.NavigationView ">
         <item name="materialThemeOverlay">@style/MaterialBottomNavigationOverlay</item>
         <item name="itemTextAppearanceActive">@style/MaterialBottomNavigationText</item>
         <item name="itemTextAppearanceInactive">@style/MaterialBottomNavigationText</item>
